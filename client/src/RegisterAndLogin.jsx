@@ -13,7 +13,7 @@ export default function RegisterAndLogin() {
   async function handleSubmit(ev){
     ev.preventDefault();
   const url = isLoginOrRegister === "register" ? "/register" : "/login"
-   const {data} =  await axios.post("/register", {username, password});
+   const {data} =  await axios.post(url, {username, password});
    setLoggedInUsername(username)
    setId(data.id)
   }
